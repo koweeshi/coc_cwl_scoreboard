@@ -297,6 +297,7 @@
                 <th>Destruction %</th>
                 <th>Bonuses</th>
                 <th>Demerit</th>
+                <th>Attacks</th>
             </tr>
             {% for record in data %}
             <tr>
@@ -306,6 +307,7 @@
                 <td>{{ record['Total Percentage'] }}</td>
                 <td>{{ record['Bonus Awarded'] }}</td>
                 <td>{{ record['Demerit'] }}</td>
+                <td>{{ record['Attacks'] }}/{{ limited_data[0]['Round'] }}</td>
             </tr>
             {% endfor %}
 
@@ -339,6 +341,7 @@
                         <td>${record['Total Percentage']}</td>
                         <td>${record['Bonus Awarded']}</td>
                         <td>${record['Demerit']}</td>
+                        <td>${record['Attacks']}/${record['Round']}
                     `;
                     table.appendChild(newRow);
                 }
